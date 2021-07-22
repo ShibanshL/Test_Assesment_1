@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>WeTransfer</title>
+</head>
+<body>
+    <div class="container">
+        <div class="sub_container">
+            <div class="navbar">
+                <img src="white.png" class="image1" alt="error">
+                <div class="list">
+                    <ul>
+                        <li>Help</li>
+                        <li>Products</li>
+                        <li>Company</li>
+                        <li>Sign up</li>
+                        <li>Log in</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="main_content">
+                <div class="side_element">
+                    <div class="subs_element">
+                        <div class="subm_element">
+                            <div class="heading">
+                                <img src="black.png" alt="error" class="class2">
+                                <h1>You're<br><b>almost</b> there</h1>
+                            </div>
+                            <div class="condition">
+                                <h2>To continue please agree <br>to our <a href="#">Terms and conditions</a></h2>
+                            </div>
+                            <div class="button">
+                                <button onclick={click()}>I agree</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main_element">
+                    <div class="sub_m_element">
+                        <div class="title">
+                            <h2>Welcome to WeTransfer</h2>
+                        </div>
+                        <div class="main_heading">
+                            <h2>Our cookies<br> feed culture</h2>
+                        </div>
+                        <div class="para_m">
+                            <p><b>Did you know that 30% of our advertising space goes to artists?</b> By accepting our cookies, you allow us to show you a little bit of art, causes we care about, and some award-winning ads that don’t get in the way.<br><br>
+                            Do you also allow cookies from our third-party advertising partners so we can personalize the ads you see?</p>
+                        </div>
+                        <div class="buttons_m">
+                            <button onclick={check()} class="accept">I accept</button>
+                            <button class="cookies">Manage cookies</button>
+                            <a>No thanks</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="name">
+                Alva Skog
+            </div>
+        </div>
+    </div>
+    <script>
+        var sub= document.querySelector(".subm_element")
+        function check(){
+            sub.style.opacity="100%"
+            sub.style.transition="0.5s ease"
+            var accept=document.querySelector(".button button")
+            accept.addEventListener("click",()=>{
+                sub.style.opacity="0"
+                sub.style.transition="0.5s ease"
+            })
+            
+        }
+        function click(){
+            var sub= document.querySelector(".subm_element")
+            sub.style.color="pink"
+            sub.style.transition="0.5s ease"
+        }
+       
+  
+    </script>
+</body>
+</html>
